@@ -1,92 +1,91 @@
 ---
 label: Footer Configuration
 hide_body: true
-is_partial: false
 fields:
-  - type: field_group
-    name: contact
-    label: Contact
-    description: The contact section of the footer
-    fields:
-      - type: text
-        name: title
-        label: Title
-        description: The contact section title
-      - type: textarea
-        name: subtitle
-        label: Subtitle
-        description: The contact section subtitle
-        config:
-          wysiwyg: true
-          schema:
-            format: markdown
-  - type: field_group
-    name: links_col1
-    label: First links column
-    fields:
-      - type: include
-        name: include_link_column
-        label: Link Column
-        template: link_column
-  - type: field_group
-    name: links_col2
-    label: Second links column
-    fields:
-      - type: include
-        name: include_link_column
-        label: Link Column
-        template: link_column
-  - type: field_group
-    name: links_col3
-    label: Third links column
-    fields:
-      - type: include
-        name: include_link_column
-        label: Link Column
-        template: link_column
-  - type: field_group
-    name: links_col4
-    label: Fourth links column
-    fields:
-      - type: include
-        name: include_link_column
-        label: Link Column
-        template: link_column
-  - type: field_group_list
-    name: social_links
-    label: Social Links
-    description: Contact Methods
-    config:
-      labelField: text
-    fields:
-      - type: text
-        name: text
-        label: Contact method description
-      - type: text
-        name: icon
-        label: Icon
-        description: Font Awesome Icon
-      - type: text
-        name: link
-        label: URL
+- type: field_group
+  name: contact
+  label: Contact
+  description: The contact section of the footer
+  fields:
   - type: text
-    name: copyright
-    label: Copyright
-    description: Copyright displayed at the bottom of the page
-  - type: field_group_list
-    name: links
-    label: Copyright Links
-    description: 'A list of links displayed in the footer, next to the copyright text.'
+    name: title
+    label: Title
+    description: The contact section title
+  - type: textarea
+    name: subtitle
+    label: Subtitle
+    description: The contact section subtitle
     config:
-      labelField: text
-    fields:
-      - type: text
-        name: text
-        label: Link text
-      - type: text
-        name: url
-        label: URL
-      - type: boolean
-        name: new_window
-        label: Open in new window
-        default: true
+      wysiwyg: true
+      schema:
+        format: markdown
+- type: field_group
+  name: links_col1
+  label: First links column
+  fields:
+  - type: include
+    name: include_link_column
+    label: Link Column
+    template: link_column
+- type: field_group
+  name: links_col2
+  label: Second links column
+  fields:
+  - type: include
+    name: include_link_column
+    label: Link Column
+    template: link_column
+- type: field_group
+  name: links_col3
+  label: Third links column
+  fields:
+  - type: include
+    name: include_link_column
+    label: Link Column
+    template: link_column
+- type: field_group
+  name: links_col4
+  label: Fourth links column
+  fields:
+  - type: include
+    name: include_link_column
+    label: Link Column
+    template: link_column
+- type: field_group_list
+  name: social_links
+  label: Social Links
+  description: Contact Methods
+  config:
+    labelField: text
+  fields:
+  - type: text
+    name: text
+    label: Contact method description
+  - type: text
+    name: icon
+    label: Icon
+    description: Font Awesome Icon
+  - type: text
+    name: link
+    label: URL
+- type: text
+  name: copyright
+  label: Copyright
+  description: Copyright displayed at the bottom of the page
+- type: field_group_list
+  name: links
+  label: Copyright Links
+  description: A list of links displayed in the footer, next to the copyright text.
+  config:
+    labelField: text
+  fields:
+  - type: text
+    name: text
+    label: Link text
+  - type: text
+    name: url
+    label: URL
+  - type: boolean
+    name: new_window
+    label: Open in new window
+    default: true

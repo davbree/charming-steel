@@ -1,70 +1,68 @@
 ---
 label: Features
 hide_body: true
-is_partial: true
 display_field: title
 fields:
+- type: text
+  name: title
+  label: Title
+  description: Section title (Also used bt the CMS, even if it is not displayed on
+    the page)
+  default: Features Section
+  config:
+    required: true
+- type: text
+  name: component
+  label: Component
+  hidden: true
+  config:
+    required: true
+  default: features.html
+- type: textarea
+  name: subtitle
+  label: Subtitle
+  description: Text below the section title
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
+- type: field_group_list
+  name: features
+  label: Features List
+  description: The list of features
+  config:
+    labelField: title
+  fields:
   - type: text
     name: title
-    label: Title
-    description: >-
-      Section title (Also used bt the CMS, even if it is not displayed on the
-      page)
-    default: Features Section
-    config:
-      required: true
-  - type: text
-    name: component
-    label: Component
-    hidden: true
-    config:
-      required: true
-    default: features.html
+    label: Feature Title
   - type: textarea
     name: subtitle
-    label: Subtitle
-    description: Text below the section title
+    label: Feature Subtitle
     config:
       wysiwyg: true
       schema:
         format: markdown
-  - type: field_group_list
-    name: features
-    label: Features List
-    description: The list of features
-    config:
-      labelField: title
-    fields:
-      - type: text
-        name: title
-        label: Feature Title
-      - type: textarea
-        name: subtitle
-        label: Feature Subtitle
-        config:
-          wysiwyg: true
-          schema:
-            format: markdown
-      - type: text
-        name: icon
-        label: Feature Icon
-        description: Font Awesome Icon
-      - type: select
-        name: icon_accent_color
-        label: Icon Accent Color
-        config:
-          source:
-            type: custom
-          options:
-            - accent1
-            - accent2
-            - accent3
-            - accent4
   - type: text
-    name: type
-    label: Reference Type Name
-    description: 'Name of the Stackbit object model, used by fields of type reference'
-    hidden: true
-    default: features
+    name: icon
+    label: Feature Icon
+    description: Font Awesome Icon
+  - type: select
+    name: icon_accent_color
+    label: Icon Accent Color
     config:
-      required: true
+      source:
+        type: custom
+      options:
+      - accent1
+      - accent2
+      - accent3
+      - accent4
+- type: text
+  name: type
+  label: Reference Type Name
+  description: Name of the Stackbit object model, used by fields of type reference
+  hidden: true
+  default: features
+  config:
+    required: true
